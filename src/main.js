@@ -72,14 +72,14 @@ document.getElementById('traerData').addEventListener('click', function() {
 //------------------------   /SALA 1/  ------------------------------------------------------------
 // Primera pelicula
 document.getElementById("room1").addEventListener("click", () => {
-        fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde')
+        fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
                 let contMovie1 = document.createElement("div");
                 contMovie1.className = "question";
                 searchEl.appendChild(contMovie1);
                 contMovie1.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'>
-                                    <h1>Quien es el director de la pelicula?</h1>`
+                                    <h1>¿Quién es el director de la película X-Men?</h1>`
                 let imputQuestion1 = document.createElement("button");
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
@@ -103,7 +103,7 @@ document.getElementById("room1").addEventListener("click", () => {
 // Segunda pelicula
 
 document.getElementById("room1").addEventListener("click", () => {
-        fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde')
+        fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
                 let contMovie = document.createElement("div");
