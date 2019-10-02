@@ -31,11 +31,11 @@ body{
     flex-direction: row;
 }
 
-.categoria{
+.select-rooms, .categorie-rooms{
     text-align: center;
     margin: 0px;
     padding: 60px;
-    width: 40%;
+    width: 50%;
 }
 
 #reviewSection{
@@ -46,7 +46,21 @@ body{
     background-color: lightskyblue;
 }
 
+#sectionroom1{
+    background-color: lightskyblue;
+}
 
+#sectionroom2{
+    background-color: lightgrey;
+}
+
+#sectionroom3{
+    background-color: lightpink;
+}
+
+#sectionroom4{
+    background-color: lightyellow;
+}
 
 .buttonOne, .button-room{
     padding: 10px 20px;
@@ -62,6 +76,42 @@ body{
     background-color: darkcyan;
     cursor: pointer;
 }
+
+.search-bar{
+    margin: 40px 0px;
+    width: 100%;
+    height: 60px;
+    background-color: lightcoral;
+    align-items: center;
+}
+
+.bar-search{
+    background-color: lightblue;
+    height: 30px;
+    border: 5px;
+    border-color: gray;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+
+.icon-search{
+    background-color: lightgreen;
+    border: 0px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 10px;
+    height: 30px;
+}
+
+
+#home-container, #reviews-container, #rooms-container, #container-results{
+    display: none;
+}
+
+
+ 
+
+
 
 
 /*Responsive para telefonos grandes y tablets*/
