@@ -1,4 +1,6 @@
 *{
+    margin: 0px;
+    padding: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -8,12 +10,55 @@ body{
     padding: 0;
     position: absolute;
     width: 100%;
+    height: 100%;
 }
 
 
 /*Responsive general para computadoras*/
 
+.logo{
+    height: 70px;
+    margin: 20px;
+}
 
+.containerHome{
+    display: flex-box;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.categoria{
+    text-align: center;
+    margin: 0px;
+    padding: 60px;
+    width: 49%;
+}
+
+#reviewSection{
+    background-color: lightyellow;
+}
+
+#triviaSection{
+    background-color: lightskyblue;
+}
+
+
+
+.buttonOne, .button-room{
+    padding: 10px 20px;
+    font-family: 'Arial';
+    font-size: 14px;
+    background-color: lightcoral;
+    border: 0px;
+    border-radius: 20px;
+    margin: 60px;
+}
+
+.buttonOne:hover, .button-room:hover{
+    background-color: darkcyan;
+    cursor: pointer;
+}
 
 
 /*Responsive para telefonos grandes y tablets*/
@@ -30,5 +75,25 @@ body{
 
 @media screen and (max-width:680px){
 
+    .containerHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .categoria{
+        text-align: center;
+        margin: 0px;
+        padding: 60px;
+        height: 100%;
+    }
+    
+    #reviewSection{
+        background-color: lightyellow;
+    }
+    
+    #triviaSection{
+        background-color: lightskyblue;
+    }
 
 }
