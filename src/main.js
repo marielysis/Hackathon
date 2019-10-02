@@ -1,3 +1,44 @@
+//navegacion entre secciones/botones
+
+document.getElementById("imagen-logo").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="block";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="none";
+document.getElementById("root").innerHTML="";
+});
+
+document.getElementById("buttonReviews").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="block";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="none";
+document.getElementById("root").innerHTML="";
+});
+
+
+document.getElementById("buttonPlay").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="block";
+document.getElementById("results-container").style.display="none";
+document.getElementById("root").innerHTML="";
+});
+
+
+document.getElementById("buttonPlay").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="block";
+document.getElementById("results-container").style.display="none";
+document.getElementById("root").innerHTML="";
+});
+
+
+
+
+
+
 document.getElementById('traerData').addEventListener('click', function() {
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
