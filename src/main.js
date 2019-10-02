@@ -55,33 +55,13 @@ document.getElementById("room1").addEventListener("click", () => {
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion3);
 
-                //imprimo otra pelicula
-                let contMovie2 = document.createElement("div");
-                contMovie2.className = "question";
-                searchEl.appendChild(contMovie2);
-                contMovie2.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'>
-                                    <h1>Quien es el protagonista de la pelicula?</h1>`
-                let imputQuestion11 = document.createElement("button");
-                imputQuestion11.className = "butQ";
-                imputQuestion11.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion11);
-
-                let imputQuestion22 = document.createElement("button");
-                imputQuestion22.className = "butQ";
-                imputQuestion22.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion22);
-
-                let imputQuestion33 = document.createElement("button");
-                imputQuestion33.className = "butQ";
-                imputQuestion33.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion33);
-
                 console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
 
+
 // Segunda pelicula
-/*
+
 document.getElementById("room1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde')
             .then(res => res.json())
@@ -89,7 +69,7 @@ document.getElementById("room1").addEventListener("click", () => {
                 let contMovie = document.createElement("div");
                 contMovie.className = "question";
                 searchEl.appendChild(contMovie);
-                contMovie.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'>
+                contMovie.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'>
                                 <h1>Quien es el director de la pelicula?</h1>`
                 let imputQuestion1 = document.createElement("button");
                 imputQuestion1.className = "butQ";
@@ -108,4 +88,4 @@ document.getElementById("room1").addEventListener("click", () => {
 
                 console.log(data);
             }); //Cierre then data peli1 
-    }) */ //Cierre sala 1
+    }) //Cierre sala 1
