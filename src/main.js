@@ -1,45 +1,46 @@
 //navegacion entre secciones/botones
 
-document.getElementById("imagen-logo").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="block";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("imagen-logo").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "block";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("roomsContainer").style.display = "none";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
 
-document.getElementById("buttonReviews").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="block";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
-});
-
-
-document.getElementById("buttonPlay").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="block";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonReviews").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "block";
+    document.getElementById("roomsContainer").style.display = "none";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
 
 
-document.getElementById("buttonPlay").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="block";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonPlay").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("roomsContainer").style.display = "block";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
+});
+
+
+document.getElementById("buttonPlay").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("roomsContainer").style.display = "block";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
 
 
 
 
 let searchEl = document.getElementById('searchResult');
+let contQA = document.getElementById('roomsContainer');
 
-document.getElementById('traerData').addEventListener('click', function() {
+document.getElementById('searchData').addEventListener('click', function() {
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
 
@@ -75,27 +76,28 @@ document.getElementById("room1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
+                contQA.innerHTML = " ";
                 let contMovie1 = document.createElement("div");
                 contMovie1.className = "question";
-                searchEl.appendChild(contMovie1);
+                contQA.appendChild(contMovie1);
                 contMovie1.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'>
                                     <h1>¿Quién es el director de la película X-Men?</h1>`
                 let imputQuestion1 = document.createElement("button");
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion1);
+                contQA.appendChild(imputQuestion1);
 
                 let imputQuestion2 = document.createElement("button");
                 imputQuestion2.className = "butQ";
                 imputQuestion2.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion2);
+                contQA.appendChild(imputQuestion2);
 
                 let imputQuestion3 = document.createElement("button");
                 imputQuestion3.className = "butQ";
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion3);
+                contQA.appendChild(imputQuestion3);
 
-                console.log(data);
+                //console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
 
