@@ -16,9 +16,9 @@
 
   <!--Header Nav-->
 
-   <header>
+   <header id="header-container">
      <div class="container">
-       <img id="imagen-logo" class="logo" src="../Img's/Logo_TV_2015.png" />
+       <img id="imagen-logo" class="logo" src="../Imgs/Logo_TV_2015.png" />
        <nav class="navigationMenu">
        </nav>
      </div>  
@@ -32,15 +32,15 @@
     <div id="home-container" class="container-fluid">
 
     <section id="reviewSection" class="main row">
-      <article id="enter-section" class="col-sm-12 col-md-6">
-        <h2>Descubre tus peliculas favoritas</h2>
-        <button id="buttonReviews" class="btn btn-block btn-primary">Descubrir</button>
+      <article id="enter-section1" class="col-sm-12 col-md-6">
+        <h3>Descubre tus peliculas favoritas</h3>
+          <div id="btn-cont" class="btns"><button id="buttonReviews" class="btn btn-block">Descubrir</button></div>
       </article>
       <div class="clearfix"></div>
 
-      <article id="enter-section" class="col-sm-12 col-md-6">
-        <h2>Pon a prueba tus conocimientos sobre tus peliculas favoritas</h2>
-        <button id="buttonPlay" class="buttonOne">Jugar</button>
+      <article id="enter-section2" class="col-sm-12 col-md-6">
+        <h3>Pon a prueba tus conocimientos sobre tus peliculas favoritas</h3>
+          <div id="btn-cont" class="btns"><button id="buttonPlay" class="btn btn-block">Jugar</button></div>
       </article>
     </section>
     <div class="clearfix"></div>
@@ -60,6 +60,8 @@
       </div>
     </div>
   <div class="clearfix"></div>
+
+  <div id="movie-container" class="container-fluid"></div>
   
   </div>
 
@@ -70,32 +72,36 @@
     <div id="rooms-container" class="container-fluid">
 
       <section class="row">
-        <div class="col-xs-12 col-md-4">
+        <div id="room1" class="col-xs-12 col-md-4">
             <h2>Sala 1</h2>
-            <button id="buttonRoom1" class="button-room">Sala 1</button>
+            <div class="btns"><button id="buttonRoom1" class="btn btn-block">Entrar</button></div>
         </div>
         <div class="clearfix"></div>
   
-        <div class="col-xs-12 col-md-4">
+        <div id="room2" class="col-xs-12 col-md-4">
             <h2>Sala 2</h2>
-            <button id="buttonRoom2" class="button-room">Sala 2</button>
+            <div class="btns"><button id="buttonRoom2" class="btn btn-block">Entrar</button></div>
         </div>
         <div class="clearfix"></div>
   
-        <div class="col-xs-12 col-md-4">
+        <div id="room3" class="col-xs-12 col-md-4">
             <h2>Sala 3</h2>
-            <button id="buttonRoom3" class="button-room">Sala 3</button>
+            <div class="btns"><button id="buttonRoom3" class="btn btn-block">Entrar</button></div>
         </div>
         <div class="clearfix"></div>
       </section>
-    
-  
-      <div id="results-container" class="container">
+
+
+
+        <div id="results-container" class="container-fluid">
           <section id="sectionroom3" class="col-md-12">
               <h3>Estos son tus resultado del juego</h3>
           </section> 
       </div>
       <div class="clearfix"></div>
+    
+  
+  
     </div>
 
        

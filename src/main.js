@@ -1,70 +1,58 @@
 //navegacion entre secciones/botones
-
-document.getElementById("imagen-logo").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="block";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("imagen-logo").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "block";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("rooms-container").style.display = "none";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
-
-document.getElementById("buttonReviews").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="block";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonReviews").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "block";
+    document.getElementById("rooms-container").style.display = "none";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
-
-
-document.getElementById("buttonPlay").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="block";
-document.getElementById("results-container").style.display="none";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonPlay").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("rooms-container").style.display = "block";
+    document.getElementById("results-container").style.display = "none";
+    document.getElementById("root").innerHTML = "";
 });
-
-
-document.getElementById("buttonRoom1").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="block";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonRoom1").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("rooms-container").style.display = "none";
+    document.getElementById("results-container").style.display = "block";
+    document.getElementById("root").innerHTML = "";
 });
-    
-document.getElementById("buttonRoom2").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="block";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonRoom2").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("rooms-container").style.display = "none";
+    document.getElementById("results-container").style.display = "block";
+    document.getElementById("root").innerHTML = "";
 });
-    
-document.getElementById("buttonRoom3").addEventListener("click", () =>{
-document.getElementById("home-container").style.display="none";
-document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="none";
-document.getElementById("results-container").style.display="block";
-document.getElementById("root").innerHTML="";
+document.getElementById("buttonRoom3").addEventListener("click", () => {
+    document.getElementById("home-container").style.display = "none";
+    document.getElementById("reviews-container").style.display = "none";
+    document.getElementById("rooms-container").style.display = "none";
+    document.getElementById("results-container").style.display = "block";
+    document.getElementById("root").innerHTML = "";
 });
-
-
-
-
 let searchEl = document.getElementById('searchResult');
+let tqllr = document.getElementById('movie-container');
 
 document.getElementById('searchData').addEventListener('click', function() {
+    tqllr.innerHTML = " ";
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
-
+    
     fetch(request).then(function(result) {
         return result.json();
     }).then(function(data) {
         console.log(data);
-
-
         var len = data.Search.length;
         for (var i = 0; i < len; i++) {
             var movieContainer = document.createElement('div');
@@ -85,8 +73,30 @@ document.getElementById('searchData').addEventListener('click', function() {
         }
     });
 });
-//------------------------   /SALA 1/  ------------------------------------------------------------
-// Primera pelicula
+//---------------- Descubrir-----------------------------------------------------------------------
+document.getElementById("buttonReviews").addEventListener("click", () => {
+        fetch('https://api.themoviedb.org/3/discover/movie?api_key=71949b65aff64acdb6a0fce55fb7fb1d&sort_by=popularity.desc&page=1&primary_release_date.gte=2019-01-01')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                //let searchEl = document.getElementById("root");
+                const listmovie2 = data.results.map(element => {
+                    return `<div class="results">
+                                <div class="movie-card">
+                                    <img class="movie-img" src= "${'https://image.tmdb.org/t/p/w500'+element.poster_path}"> 
+                                    <div class="movie-text"> 
+                                        <p class="movie-tittle"> ${element.title}</p>
+                                        <p class="movie-year">Year: ${element.release_date}</p>
+                                        <p class="movie-review"> Reseña: ${element.overview}</p>
+                                    </div>
+                                </div>
+                            </div>`
+                }).join('');
+                tqllr.innerHTML = listmovie2;
+            })
+    })
+    //------------------------   /SALA 1/  ------------------------------------------------------------
+    // Primera pelicula
 document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde&s=')
             .then(res => res.json())
@@ -100,24 +110,18 @@ document.getElementById("buttonRoom1").addEventListener("click", () => {
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion1);
-
                 let imputQuestion2 = document.createElement("button");
                 imputQuestion2.className = "butQ";
                 imputQuestion2.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion2);
-
                 let imputQuestion3 = document.createElement("button");
                 imputQuestion3.className = "butQ";
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion3);
-
                 console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
-
-
 // Segunda pelicula
-
 document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde&s=')
             .then(res => res.json())
@@ -131,17 +135,14 @@ document.getElementById("buttonRoom1").addEventListener("click", () => {
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion1);
-
                 let imputQuestion2 = document.createElement("button");
                 imputQuestion2.className = "butQ";
                 imputQuestion2.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion2);
-
                 let imputQuestion3 = document.createElement("button");
                 imputQuestion3.className = "butQ";
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
                 searchEl.appendChild(imputQuestion3);
-
                 console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
