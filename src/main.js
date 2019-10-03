@@ -13,7 +13,7 @@ document.getElementById("buttonReviews").addEventListener("click", () => {
     document.getElementById("reviews-container").style.display = "block";
     document.getElementById("roomsContainer").style.display = "none";
     document.getElementById("results-container").style.display = "none";
-    document.getElementById("searchResult").style.display = "block";
+    //document.getElementById("searchResult").style.display = "block";
     document.getElementById("root").innerHTML = "";
 });
 
@@ -38,40 +38,9 @@ document.getElementById("buttonPlay").addEventListener("click", () => {
 
 
 //--------------SECCION DESCUBRIR-----------------------------------------------------------
-let searchEl = document.getElementById('reviews-container');
+let searchEl = document.getElementById('seaResult');
 let movieTqll = document.getElementById("root");
 let contQA = document.getElementById('roomsContainer');
-
-document.getElementById('searchData').addEventListener('click', function() {
-    movieTqll.innerHTML = " ";
-    const titleSearch = document.getElementById('searchBar').value;
-    const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
-
-    fetch(request).then(function(result) {
-        return result.json();
-    }).then(function(data) {
-        console.log(data);
-
-        var len = data.Search.length;
-        for (var i = 0; i < len; i++) {
-            var movieContainer = document.createElement('div');
-            movieContainer.className = 'search-result--item';
-            var titleEl = document.createElement('div');
-            titleEl.innerText = data.Search[i].Title;
-            var yearEl = document.createElement('div');
-            yearEl.innerText = data.Search[i].Year;
-            var typeEl = document.createElement('div');
-            typeEl.innerText = data.Search[i].Type;
-            var posterEl = document.createElement('img');
-            posterEl.src = data.Search[i].Poster;
-            movieContainer.appendChild(posterEl);
-            movieContainer.appendChild(titleEl);
-            movieContainer.appendChild(yearEl);
-            movieContainer.appendChild(typeEl);
-            movieTqll.appendChild(movieContainer);
-        }
-    });
-});
 
 //Imprime en descubrir las peliculas mas taquilleras del 2019 con otra data
 document.getElementById("buttonReviews").addEventListener("click", () => {
@@ -94,6 +63,41 @@ document.getElementById("buttonReviews").addEventListener("click", () => {
             movieTqll.innerHTML = listmovie2;
         })
 })
+
+//buscar titulos en
+document.getElementById('searchData').addEventListener('click', function() {
+    //movieTqll.innerHTML = " ";
+    const titleSearch = document.getElementById('searchBar').value;
+    const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
+
+    fetch(request).then(function(result) {
+        return result.json();
+    }).then(function(data) {
+        console.log(data);
+
+        // let searchEl = document.getElementById('searchResult');
+        var len = data.Search.length;
+        for (var i = 0; i < len; i++) {
+            var movieContainer = document.createElement('div');
+            movieContainer.className = 'search-result--item';
+            var titleEl = document.createElement('div');
+            titleEl.innerText = data.Search[i].Title;
+            var yearEl = document.createElement('div');
+            yearEl.innerText = data.Search[i].Year;
+            var typeEl = document.createElement('div');
+            typeEl.innerText = data.Search[i].Type;
+            var posterEl = document.createElement('img');
+            posterEl.src = data.Search[i].Poster;
+            movieContainer.appendChild(posterEl);
+            movieContainer.appendChild(titleEl);
+            movieContainer.appendChild(yearEl);
+            movieContainer.appendChild(typeEl);
+            movieTqll.appendChild(movieContainer);
+        }
+    });
+});
+
+
 
 //------------------------SECCION TRIVIA-----------------------------------------------------------------------
 //------------------------   /SALA 1/  ------------------------------------------------------------
