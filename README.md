@@ -22,6 +22,35 @@ Cuando abordamos el proyecto, tuvimos la idea inicial de hacer un juego, que cum
 
 ### **2.2 Encuestas**
 
-Basadas en el punto anterior, encuenstamos a usuarios para saber cuáles eran sus preferencias. Los resultados que obtuvimos fueron los siguientes:
+Basadas en el punto anterior, encuenstamos a 62 usuarios para saber cuáles eran sus preferencias. Los resultados que obtuvimos fueron los siguientes:
+
+![Encuestas](https://i.ibb.co/wWggT4K/encuestas.jpg)<br />
+
+### **2.3 Conclusiones**
+
+1.- Nuestras usuarias son mayoritariamente mujeres entre 25 y 40 años.</br>
+2.- Ven películas preferentemente en el computador.</br>
+3.- Antes de ver una película, prefieren leer reseñas y el resumen.</br>
+4.- Están interesadas en poner a prueba sus conocimientos.</br>
+
+### **2.4 Definición de Usuario**
+
+**¡Te presentamos a nuestro User persona!**
+
+![User Persona](https://i.ibb.co/4Vnw1fZ/user-persona-hackaton-profile-01.jpg)<br />
+
+### **2.4 Historias de Usuario**
+
+![Historias de Usuario](https://i.ibb.co/rdwQNx6/historias-de-usuario.jpg)<br />
+
+### **4.4 Prototipo de Alta Fidelidad**
+
+Acá puedes ver nuestro rpototipo de alta fidelidad: </br>
+
+https://www.figma.com/file/MvsTKdxTd7JZB8q2HC3yIZ/Hackaton-Pel%C3%ADculas-Prototipo-Alta?node-id=0%3A1
+
+![Figma](https://i.ibb.co/19tkfht/prototipo-alta.jpg)
+
+
 
 
