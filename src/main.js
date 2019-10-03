@@ -13,6 +13,7 @@ document.getElementById("buttonReviews").addEventListener("click", () => {
     document.getElementById("reviews-container").style.display = "block";
     document.getElementById("roomsContainer").style.display = "none";
     document.getElementById("results-container").style.display = "none";
+    document.getElementById("searchResult").style.display = "block";
     document.getElementById("root").innerHTML = "";
 });
 
@@ -36,11 +37,13 @@ document.getElementById("buttonPlay").addEventListener("click", () => {
 
 
 
-//----SECCION DESCUBRIR-----------------------------------------------------------------------
-let searchEl = document.getElementById('searchResult');
+//--------------SECCION DESCUBRIR-----------------------------------------------------------
+let searchEl = document.getElementById('reviews-container');
+let movieTqll = document.getElementById("root");
 let contQA = document.getElementById('roomsContainer');
 
 document.getElementById('searchData').addEventListener('click', function() {
+    movieTqll.innerHTML = " ";
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
 
@@ -49,11 +52,10 @@ document.getElementById('searchData').addEventListener('click', function() {
     }).then(function(data) {
         console.log(data);
 
-
         var len = data.Search.length;
         for (var i = 0; i < len; i++) {
             var movieContainer = document.createElement('div');
-            movieContainer.className = 'results';
+            movieContainer.className = 'search-result--item';
             var titleEl = document.createElement('div');
             titleEl.innerText = data.Search[i].Title;
             var yearEl = document.createElement('div');
@@ -66,11 +68,12 @@ document.getElementById('searchData').addEventListener('click', function() {
             movieContainer.appendChild(titleEl);
             movieContainer.appendChild(yearEl);
             movieContainer.appendChild(typeEl);
-            searchEl.appendChild(movieContainer);
+            movieTqll.appendChild(movieContainer);
         }
     });
 });
 
+//Imprime en descubrir las peliculas mas taquilleras del 2019 con otra data
 document.getElementById("buttonReviews").addEventListener("click", () => {
     fetch('https://api.themoviedb.org/3/discover/movie?api_key=71949b65aff64acdb6a0fce55fb7fb1d&sort_by=popularity.desc&page=1&primary_release_date.gte=2019-01-01')
         .then(res => res.json())
@@ -88,7 +91,7 @@ document.getElementById("buttonReviews").addEventListener("click", () => {
                        </div>`
             }).join('');
 
-            searchEl.innerHTML = listmovie2;
+            movieTqll.innerHTML = listmovie2;
         })
 })
 

@@ -140,11 +140,11 @@ body {
     }
 }
 
-.results {
+.search-result--item {
     width: auto;
     height: auto;
     background-image: linear-gradient(#f5f5f5, #FFFFFF);
-    display: inline-block;
+    display: none;
     margin-right: 30px;
     margin-top: 30px;
     border-radius: 18px;
