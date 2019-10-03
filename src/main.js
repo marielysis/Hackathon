@@ -26,11 +26,27 @@ document.getElementById("root").innerHTML="";
 });
 
 
-document.getElementById("buttonPlay").addEventListener("click", () =>{
+document.getElementById("buttonRoom1").addEventListener("click", () =>{
 document.getElementById("home-container").style.display="none";
 document.getElementById("reviews-container" ).style.display="none";
-document.getElementById("rooms-container").style.display="block";
-document.getElementById("results-container").style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
+document.getElementById("root").innerHTML="";
+});
+    
+document.getElementById("buttonRoom2").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
+document.getElementById("root").innerHTML="";
+});
+    
+document.getElementById("buttonRoom3").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
 document.getElementById("root").innerHTML="";
 });
 
@@ -39,7 +55,7 @@ document.getElementById("root").innerHTML="";
 
 let searchEl = document.getElementById('searchResult');
 
-document.getElementById('traerData').addEventListener('click', function() {
+document.getElementById('searchData').addEventListener('click', function() {
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
 
@@ -71,7 +87,7 @@ document.getElementById('traerData').addEventListener('click', function() {
 });
 //------------------------   /SALA 1/  ------------------------------------------------------------
 // Primera pelicula
-document.getElementById("room1").addEventListener("click", () => {
+document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
@@ -102,7 +118,7 @@ document.getElementById("room1").addEventListener("click", () => {
 
 // Segunda pelicula
 
-document.getElementById("room1").addEventListener("click", () => {
+document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {

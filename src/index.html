@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hackaton</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-  <div id="root"></div>
 
+   <div id="root"></div>
 
-    <!--Header Nav-->
-    <header>
-        <img id="imagen-logo" class="logo" src="../Img's/Logo_TV_2015.png" />
-        <nav class="navigationMenu">
+  <!--Header Nav-->
 
-        </nav>
-    </header>
-    <div class="container"></div>
-  </div>
+   <header>
+     <div class="container">
+       <img id="imagen-logo" class="logo" src="../Img's/Logo_TV_2015.png" />
+       <nav class="navigationMenu">
+       </nav>
+     </div>  
+   </header>
+   <div class="clearfix"></div>
 
 
 
     <!--Sección Home-->
 
-  <div id="home-container" class="container-home">
+    <div id="home-container" class="container-fluid">
 
-      <section id="reviewSection" class="section">
-          <h2>Descubre tus peliculas favoritas</h2>
-          <button id="buttonReviews" class="buttonOne">Descubrir</button>
-      </section>
+    <section id="reviewSection" class="main row">
+      <article id="enter-section" class="col-sm-12 col-md-6">
+        <h2>Descubre tus peliculas favoritas</h2>
+        <button id="buttonReviews" class="btn btn-block btn-primary">Descubrir</button>
+      </article>
+      <div class="clearfix"></div>
 
-
-    <section id="triviaSection" class="section">
+      <article id="enter-section" class="col-sm-12 col-md-6">
         <h2>Pon a prueba tus conocimientos sobre tus peliculas favoritas</h2>
         <button id="buttonPlay" class="buttonOne">Jugar</button>
+      </article>
     </section>
+    <div class="clearfix"></div>
 
   </div>
 
@@ -49,60 +55,59 @@
 
     <div id="searchResult">
       <div class="search-bar">
-          <input id="searchBar" class="bar-search" type="text" placeholder="buscar">
-          <button id="searchData" class="icon-search">Buscar</button>
+            <input id="searchBar" class="bar-search" type="text" placeholder="buscar">
+            <button id="searchData" class="icon-search">Buscar</button>
       </div>
     </div>
-
+  <div class="clearfix"></div>
+  
   </div>
 
 
 
     <!--Sección Trivia-->
 
-  <div id="rooms-container" class="container-rooms">
-  
-    <div id="rooms1-2" class="select-rooms">
-        <section id="sectionroom1" class="categorie-rooms">
+    <div id="rooms-container" class="container-fluid">
+
+      <section class="row">
+        <div class="col-xs-12 col-md-4">
             <h2>Sala 1</h2>
-            <button id="room1" class="button-room">Sala 1</button>
-        </section>
-
-        <section id="sectionroom2" class="categorie-rooms">
+            <button id="buttonRoom1" class="button-room">Sala 1</button>
+        </div>
+        <div class="clearfix"></div>
+  
+        <div class="col-xs-12 col-md-4">
             <h2>Sala 2</h2>
-            <button id="room2" class="button-room">Sala 2</button>
-        </section>
-    </div>    
-      
-    <div id="rooms3-4" class="select-rooms">
-        <section id="sectionroom3" class="categorie-rooms">
+            <button id="buttonRoom2" class="button-room">Sala 2</button>
+        </div>
+        <div class="clearfix"></div>
+  
+        <div class="col-xs-12 col-md-4">
             <h2>Sala 3</h2>
-            <button id="room3" class="button-room">Sala 3</button>
-        </section>
-
-        <section id="sectionroom4" class="categorie-rooms">
-            <h2>Sala 4</h2>
-            <button id="room4" class="button-room">Sala 4</button>
-        </section>
+            <button id="buttonRoom3" class="button-room">Sala 3</button>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+    
+  
+      <div id="results-container" class="container">
+          <section id="sectionroom3" class="col-md-12">
+              <h3>Estos son tus resultado del juego</h3>
+          </section> 
+      </div>
+      <div class="clearfix"></div>
     </div>
 
-    <div id="results-container" class="container-results">
-        <section id="sectionroom3" class="categorie-rooms">
-            <h3>Estos son tus resultado del juego</h3>
-        </section> 
-    </div>
-  </div>
-
+       
 
     <!--Footer-->
 
-  <div class="container"></div>
-    <footer>
-        <p class="icono"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/pokemongoapp/?hl=es-la"> instagram</a> </p><br>
-        <p class="icono"><i class="fab fa-twitter"></i><a href="https://www.facebook.com/PokemonGO/"> Twitter</a> </p><br>
-        <p class="icono"><i class="fab fa-facebook"></i><a href="https://twitter.com/pokemongoapp?lang=es"> facebook</a> </p><br>
-    </footer>
-  </div>
+  <footer>
+    <div id="footer-id" class="container-fluid">
+        <h6>© 2019 - Realizado por: Constanza | Marielys | Sylvia | Veronica</h6>   
+    </div>
+    <div class="clearfix"></div>
+  </footer>
 
 
 
