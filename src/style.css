@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
+
 
 body{
     margin: 0;
@@ -21,6 +20,7 @@ body{
 
 /*Responsive general para computadoras*/
 
+
 /* home - pantalla elegir sección */
 
 #header-container{
@@ -31,7 +31,7 @@ body{
     margin: 20px;
 }
 
-#home-container{
+#home-container {
     display: flex;
     flex-direction: row;
     height: 85%;
@@ -104,6 +104,7 @@ body{
     padding: 5px 20px;
     font-size: 12px;
 }
+
 
         /* imprimir resultados - tarjetas */
 .movie-container{
@@ -192,7 +193,6 @@ body{
 
 
 
-
 /* footer */
 
 footer{
@@ -211,8 +211,6 @@ footer{
     z-index: 1;
 }
 
-
-
 #home-container{
     display: block;
 }
@@ -223,14 +221,13 @@ footer{
 
 
 
-
 /*Responsive para telefonos*/
+
 
 @media screen and (max-width:680px){
 
     
     /* home - pantalla elegir sección */
-    
     
     #home-container{
         height: 50%;
@@ -263,9 +260,4 @@ footer{
     #rooms-container{
         margin-top: 5%;
     }
-    
-    #room1, #room2, #room3{
-        padding: 15% 10%;
-    }
-
 }

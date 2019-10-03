@@ -1,3 +1,4 @@
+
 //navegacion entre secciones/botones
 document.getElementById("imagen-logo").addEventListener("click", () => {
     document.getElementById("home-container").style.display = "block";
