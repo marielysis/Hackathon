@@ -1,13 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+body {
     background-color: aquamarine;
     margin: 0;
     padding: 0;
@@ -19,12 +17,19 @@ body{
 
 /*Responsive general para computadoras*/
 
-.logo{
+.logo {
     height: 70px;
     margin: 20px;
 }
 
+
 #home-container{
+=======
+.container-home,
+.container-rooms {
+    justify-content: flex-start;
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     background: lightyellow;
@@ -43,35 +48,46 @@ body{
     width: 30%;
 }
 
+
 .categorie-rooms{
+
+.select-rooms,
+.categorie-rooms {
+
     text-align: center;
     margin: 0px;
     padding: 60px;
     width: 30%;
 }
 
-#reviewSection{
+#reviewSection {
     background-color: lightyellow;
 }
 
-#triviaSection{
+#triviaSection {
     background-color: lightskyblue;
 }
 
-#sectionroom1{
+#sectionroom1 {
     background-color: lightskyblue;
 }
 
-#sectionroom2{
+#sectionroom2 {
     background-color: lightgrey;
 }
 
-#sectionroom3{
+#sectionroom3 {
     background-color: lightpink;
 }
 
 
-.buttonOne, .button-room{
+#sectionroom4 {
+    background-color: lightyellow;
+}
+
+
+.buttonOne,
+.button-room {
     padding: 10px 20px;
     font-family: 'Arial';
     font-size: 14px;
@@ -81,13 +97,18 @@ body{
     margin: 60px;
 }
 
-.buttonOne:hover, .button-room:hover{
+.buttonOne:hover,
+.button-room:hover {
     background-color: darkcyan;
     cursor: pointer;
 }
 
 
+
 .search-bar{
+
+.search-bar {
+
     margin: 40px 0px;
     width: 100%;
     height: 60px;
@@ -95,7 +116,7 @@ body{
     align-items: center;
 }
 
-.bar-search{
+.bar-search {
     background-color: lightblue;
     border: 5px;
     border-color: gray;
@@ -106,7 +127,7 @@ body{
     font-size: 12px;
 }
 
-.icon-search{
+.icon-search {
     background-color: lightgreen;
     border: 0px;
     border-radius: 5px;
@@ -117,8 +138,15 @@ body{
 
 
 #home-container, #reviews-container, #rooms-container, #container-results{
+
+#home-container,
+#reviews-container,
+#rooms-container,
+#container-results {
+
     display: none;
 }
+
 
 
 #footerid{
@@ -137,39 +165,44 @@ footer {
 
 
 
+
 /*Responsive para telefonos grandes y tablets*/
 
-@media screen and (min-width:680px) and (max-width:1024px){
-
-
-}
-
-
+@media screen and (min-width:680px) and (max-width:1024px) {}
 
 
 /*Responsive para telefonos*/
 
-@media screen and (max-width:680px){
-
-    .containerHome{
+@media screen and (max-width:680px) {
+    .containerHome {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    
-    .categoria{
+    .categoria {
         text-align: center;
         margin: 0px;
         padding: 60px;
         height: 100%;
     }
-    
-    #reviewSection{
+    #reviewSection {
         background-color: lightyellow;
     }
-    
-    #triviaSection{
+    #triviaSection {
         background-color: lightskyblue;
     }
+}
 
+.search-result--item {
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(#f5f5f5, #FFFFFF);
+    display: none;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 18px;
+    padding: 5px;
+    box-shadow: 9px 9px 21px -9px #e0fbfd;
+    text-align: center;
+    font-size: 18px;
 }
