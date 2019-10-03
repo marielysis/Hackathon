@@ -4,8 +4,7 @@
     padding: 0px;
 }
 
-
-body{
+body {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -23,10 +22,11 @@ body{
 
 /* home - pantalla elegir sección */
 
-#header-container{
+#header-container {
     height: 10%;
 }
-.logo{
+
+.logo {
     height: 70px;
     margin: 20px;
 }
@@ -38,54 +38,70 @@ body{
     text-align: center;
 }
 
-#enter-section1, #enter-section2{
+#enter-section1,
+#enter-section2 {
     padding: 20% 10%;
     color: white;
 }
 
-#enter-section1{
+#enter-section1 {
     background-color: rgba(8, 39, 107, 0.3);
     margin: 0px;
 }
 
-#enter-section2{
-    background-color:  rgba(8, 39, 107, 0.5);
+#enter-section2 {
+    background-color: rgba(8, 39, 107, 0.5);
     margin: 0px;
 }
 
-#buttonReviews, #buttonPlay, #buttonRoom1, #buttonRoom2, #buttonRoom3{
+#buttonReviews,
+#buttonPlay,
+#buttonRoom1,
+#buttonRoom2,
+#buttonRoom3,
+{
     color: aqua;
     margin: 60px 0px;
 }
 
-.btns{
-    background-color:rgba(9, 45, 143, 0.85);
+.butQ {
+    background-color: rgba(9, 45, 143, 0.85);
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+    color: aqua;
+    margin: 60px 0px;
+}
+
+.btns {
+    background-color: rgba(9, 45, 143, 0.85);
     border-radius: 10px;
     color: white;
 }
 
-.btns:hover, .btns:active{
+.btns:hover,
+.btns:active {
     background-color: rgba(0, 255, 255, 0.6);
     margin-bottom: 0px;
 }
 
 
-
-
 /* pantalla reseñas - descubrir */
 
 
-        /* barra de busqueda */
-.search-bar{
+/* barra de busqueda */
+
+.search-bar {
     margin: 40px 0px;
     width: 100%;
     height: 60px;
-    background-color :rgba(9, 45, 143, 0.4);
+    background-color: rgba(9, 45, 143, 0.4);
     padding: 15px;
     text-align: center;
 }
 
-.bar-search{
+.bar-search {
     background-color: lightgray;
     color: gray;
     border: 5px;
@@ -97,7 +113,7 @@ body{
     font-size: 12px;
 }
 
-.icon-search{
+.icon-search {
     background-color: darkgray;
     border: 0px;
     border-radius: 5px;
@@ -106,15 +122,16 @@ body{
 }
 
 
-        /* imprimir resultados - tarjetas */
-.movie-container{
+/* imprimir resultados - tarjetas */
+
+.movie-container {
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
 }
 
-.results{
-    display: flex; 
+.results {
+    display: flex;
     flex-direction: column;
     flex-flow: wrap;
     justify-content: center;
@@ -122,86 +139,94 @@ body{
     width: 100%;
 }
 
-.movie-card{
+.movie-card {
     justify-content: center;
     margin: 30px;
     width: 300px;
 }
 
-.movie-img{
+.movie-img {
     background-color: none;
     height: 450px;
     justify-content: center;
 }
 
-.movie-text{
-    background-color:  rgba(9, 45, 143, 0.45);
+.movie-text {
+    background-color: rgba(9, 45, 143, 0.45);
     font-size: 16px;
     justify-content: center;
     padding: 5px;
     text-align: center;
 }
 
-.movie-tittle, .movie-year, .movie-review{
+.movie-tittle,
+.movie-year,
+.movie-review {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
 
-.movie-tittle{
+.movie-tittle {
     font-size: 18px;
     font-style: bold;
 }
 
-.movie-year{
+.movie-year {
     font-size: 16px;
 }
 
-.movie-review{
+.movie-review {
     font-size: 14px;
 }
 
+.butQ {
+    justify-content: center;
+    margin: 30px;
+    width: 300px;
+}
 
 
 /* pantalla elegir trivia - elegir sala */
 
-#rooms-container{
+#rooms-container {
     display: flex;
     flex-direction: row;
     height: 100%;
     text-align: center;
 }
 
-#room1, #room2, #room3{
+#room1,
+#room2,
+#room3 {
     padding: 25% 10%;
     color: white;
 }
 
-#room1{
+#room1 {
     background-color: rgba(8, 39, 107, 0.3);
     margin: 0px;
 }
 
-#room2{
+#room2 {
     background-color: rgba(8, 39, 107, 0.5);
     margin: 0px;
 }
 
-#room3{
+#room3 {
     background-color: rgba(8, 39, 107, 0.7);
     margin: 0px;
 }
 
 
-
 /* footer */
 
-footer{
+footer {
     display: flex;
     background-color: aqua;
     position: relative;
-} 
+}
 
-#footer-id{
+#footer-id {
     display: flex;
     align-items: flex-end;
     height: 10%;
@@ -211,53 +236,45 @@ footer{
     z-index: 1;
 }
 
-#home-container{
+#home-container {
     display: block;
 }
 
-#reviews-container, #rooms-container, #container-results{
+#reviews-container,
+#rooms-container,
+#container-results {
     display: none;
 }
 
 
-
 /*Responsive para telefonos*/
 
-
-@media screen and (max-width:680px){
-
-    
+@media screen and (max-width:680px) {
     /* home - pantalla elegir sección */
-    
-    #home-container{
+    #home-container {
         height: 50%;
         text-align: center;
         margin-top: 5%;
     }
-    
-    #enter-section1, #enter-section2{
+    #enter-section1,
+    #enter-section2 {
         padding: 15%;
     }
-    
-    
-    #buttonReviews, #buttonPlay, #buttonRoom1, #buttonRoom2, #buttonRoom3{
+    #buttonReviews,
+    #buttonPlay,
+    #buttonRoom1,
+    #buttonRoom2,
+    #buttonRoom3 {
         margin: 40px 0px;
-    }    
-    
-    
-     /* pantalla reseñas - descubrir */
-
-        /* barra de busqueda */
-
-.bar-search{
-    margin: 0px;
-    width: 200px;
-}
-    
-
+    }
+    /* pantalla reseñas - descubrir */
+    /* barra de busqueda */
+    .bar-search {
+        margin: 0px;
+        width: 200px;
+    }
     /* pantalla elegir trivia - elegir sala */
-    
-    #rooms-container{
+    #rooms-container {
         margin-top: 5%;
     }
 }

@@ -1,5 +1,5 @@
-
 //navegacion entre secciones/botones
+
 document.getElementById("imagen-logo").addEventListener("click", () => {
     document.getElementById("home-container").style.display = "block";
     document.getElementById("reviews-container").style.display = "none";
@@ -44,12 +44,13 @@ document.getElementById("buttonRoom3").addEventListener("click", () => {
 });
 let searchEl = document.getElementById('searchResult');
 let tqllr = document.getElementById('movie-container');
+let sala1 = document.getElementById('root');
 
 document.getElementById('searchData').addEventListener('click', function() {
     tqllr.innerHTML = " ";
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
-    
+
     fetch(request).then(function(result) {
         return result.json();
     }).then(function(data) {
@@ -104,46 +105,46 @@ document.getElementById("buttonRoom1").addEventListener("click", () => {
             .then(data => {
                 let contMovie1 = document.createElement("div");
                 contMovie1.className = "question";
-                searchEl.appendChild(contMovie1);
+                sala1.appendChild(contMovie1);
                 contMovie1.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'>
                                     <h1>¿Quién es el director de la película X-Men?</h1>`
                 let imputQuestion1 = document.createElement("button");
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion1);
+                sala1.appendChild(imputQuestion1);
                 let imputQuestion2 = document.createElement("button");
                 imputQuestion2.className = "butQ";
                 imputQuestion2.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion2);
+                sala1.appendChild(imputQuestion2);
                 let imputQuestion3 = document.createElement("button");
                 imputQuestion3.className = "butQ";
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion3);
+                sala1.appendChild(imputQuestion3);
                 console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
-// Segunda pelicula
+    // Segunda pelicula
 document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
                 let contMovie = document.createElement("div");
                 contMovie.className = "question";
-                searchEl.appendChild(contMovie);
+                sala1.appendChild(contMovie);
                 contMovie.innerHTML += `<img src='https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'>
                                 <h1>Quien es el director de la pelicula?</h1>`
                 let imputQuestion1 = document.createElement("button");
                 imputQuestion1.className = "butQ";
                 imputQuestion1.textContent = "Opcion A: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion1);
+                sala1.appendChild(imputQuestion1);
                 let imputQuestion2 = document.createElement("button");
                 imputQuestion2.className = "butQ";
                 imputQuestion2.textContent = "Opcion B: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion2);
+                sala1.appendChild(imputQuestion2);
                 let imputQuestion3 = document.createElement("button");
                 imputQuestion3.className = "butQ";
                 imputQuestion3.textContent = "Opcion C: fkjhsdfgfkjdjsdvkdvkjnds";
-                searchEl.appendChild(imputQuestion3);
+                sala1.appendChild(imputQuestion3);
                 console.log(data);
             }); //Cierre then data peli1 
     }) //Cierre sala 1
