@@ -1,49 +1,48 @@
 //navegacion entre secciones/botones
 
-document.getElementById("imagen-logo").addEventListener("click", () => {
-    document.getElementById("home-container").style.display = "block";
-    document.getElementById("reviews-container").style.display = "none";
-    document.getElementById("roomsContainer").style.display = "none";
-    document.getElementById("results-container").style.display = "none";
-    document.getElementById("root").innerHTML = "";
+document.getElementById("buttonRoom1").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
+document.getElementById("root").innerHTML="";
 });
-
-document.getElementById("buttonReviews").addEventListener("click", () => {
-    document.getElementById("home-container").style.display = "none";
-    document.getElementById("reviews-container").style.display = "block";
-    document.getElementById("roomsContainer").style.display = "none";
-    document.getElementById("results-container").style.display = "none";
-    document.getElementById("searchResult").style.display = "block";
-    document.getElementById("root").innerHTML = "";
+    
+document.getElementById("buttonRoom2").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
+document.getElementById("root").innerHTML="";
 });
-
-
+    
+document.getElementById("buttonRoom3").addEventListener("click", () =>{
+document.getElementById("home-container").style.display="none";
+document.getElementById("reviews-container" ).style.display="none";
+document.getElementById("rooms-container").style.display="none";
+document.getElementById("results-container").style.display="block";
+document.getElementById("root").innerHTML="";
+=======
 document.getElementById("buttonPlay").addEventListener("click", () => {
     document.getElementById("home-container").style.display = "none";
     document.getElementById("reviews-container").style.display = "none";
     document.getElementById("roomsContainer").style.display = "block";
     document.getElementById("results-container").style.display = "none";
     document.getElementById("root").innerHTML = "";
-});
 
-
-document.getElementById("buttonPlay").addEventListener("click", () => {
-    document.getElementById("home-container").style.display = "none";
-    document.getElementById("reviews-container").style.display = "none";
-    document.getElementById("roomsContainer").style.display = "block";
-    document.getElementById("results-container").style.display = "none";
-    document.getElementById("root").innerHTML = "";
 });
 
 
 
 //--------------SECCION DESCUBRIR-----------------------------------------------------------
-let searchEl = document.getElementById('reviews-container');
+
 let movieTqll = document.getElementById("root");
 let contQA = document.getElementById('roomsContainer');
 
+let searchEl = document.getElementById('searchResult');
+
 document.getElementById('searchData').addEventListener('click', function() {
-    movieTqll.innerHTML = " ";
+
     const titleSearch = document.getElementById('searchBar').value;
     const request = new Request('http://www.omdbapi.com/?i=tt3896198&apikey=f37c3cde&s=' + titleSearch);
 
@@ -98,7 +97,7 @@ document.getElementById("buttonReviews").addEventListener("click", () => {
 //------------------------SECCION TRIVIA-----------------------------------------------------------------------
 //------------------------   /SALA 1/  ------------------------------------------------------------
 // Primera pelicula
-document.getElementById("room1").addEventListener("click", () => {
+document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0120903&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {
@@ -130,7 +129,7 @@ document.getElementById("room1").addEventListener("click", () => {
 
 // Segunda pelicula
 
-document.getElementById("room1").addEventListener("click", () => {
+document.getElementById("buttonRoom1").addEventListener("click", () => {
         fetch('http://www.omdbapi.com/?i=tt0076759&apikey=f37c3cde&s=')
             .then(res => res.json())
             .then(data => {

@@ -22,20 +22,42 @@ body {
     margin: 20px;
 }
 
+
+#home-container{
+=======
 .container-home,
 .container-rooms {
     justify-content: flex-start;
     width: 100%;
+
     display: flex;
     flex-direction: row;
+    background: lightyellow;
 }
+
+.col-sm-12 col-md-6{
+    text-align: center;
+}
+.section{
+    margin: 0;
+    padding: 60px;
+}
+
+
+.select-rooms{
+    width: 30%;
+}
+
+
+.categorie-rooms{
 
 .select-rooms,
 .categorie-rooms {
+
     text-align: center;
     margin: 0px;
     padding: 60px;
-    width: 50%;
+    width: 30%;
 }
 
 #reviewSection {
@@ -58,9 +80,11 @@ body {
     background-color: lightpink;
 }
 
+
 #sectionroom4 {
     background-color: lightyellow;
 }
+
 
 .buttonOne,
 .button-room {
@@ -79,7 +103,12 @@ body {
     cursor: pointer;
 }
 
+
+
+.search-bar{
+
 .search-bar {
+
     margin: 40px 0px;
     width: 100%;
     height: 60px;
@@ -89,28 +118,52 @@ body {
 
 .bar-search {
     background-color: lightblue;
-    height: 30px;
     border: 5px;
     border-color: gray;
     border-radius: 5px;
     margin-left: 40px;
+    width: 300px;
+    padding: 5px;
+    font-size: 12px;
 }
 
 .icon-search {
     background-color: lightgreen;
     border: 0px;
     border-radius: 5px;
-    padding: 6px 10px;
-    font-size: 10px;
-    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
 }
+
+
+
+#home-container, #reviews-container, #rooms-container, #container-results{
 
 #home-container,
 #reviews-container,
 #rooms-container,
 #container-results {
+
     display: none;
 }
+
+
+
+#footerid{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    align-items: flex-end;
+    height: 60vh;
+}
+
+footer {
+    display: inline-flex;
+    align-content: flex-end
+} 
+
+
+
 
 
 /*Responsive para telefonos grandes y tablets*/
